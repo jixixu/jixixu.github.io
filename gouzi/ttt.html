@@ -1,0 +1,73 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>LOVE</title>
+    <script src="https://res.wumaer.com/tool/love/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://res.wumaer.com/tool/love/css/bootstrap.min.css">
+    <script src="https://res.wumaer.com/tool/love/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-3"></div>
+    <div class="row col-md-6">
+        <div class="row question">
+            <div class="col-md-6 col-xs-12">
+                <p style="line-height: 50px;font-size: 20px;">狗子，我喜欢你很久了！</p>
+                <p style="line-height: 50px;font-size: 20px;">可以做我女朋友吗</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <img src="https://www.ckwlq.ml/gouzi/gouzi1.png" alt="" style="height: 200px;">
+            </div>
+        </div>
+        <div class="row question" style="margin-top: 20px;">
+            <div class="col-md-6 col-xs-6" style="text-align: center;">
+                <button type="button" class="btn btn-success" style="width: 80%" id="no">同意</button>
+            </div>
+            <div class="col-md-6 col-xs-6" style="text-align: center;">
+                <button type="button" class="btn btn-danger" style="width: 80%" id="ok">不同意</button>
+            </div>
+        </div>
+        <div class="col-md-12 col-xs-12 hide" id="success">
+            <img src="https://res.wumaer.com/tool/love/images/666.gif" alt="" style="width: 100%;">
+        </div>
+    </div>
+
+    <div class="row col-md-3"></div>
+
+</div>
+<script>
+    var i=1;
+    var ok=false;
+    $(document).ready(function(){
+        $("#no").click(function(){
+            alert("耶！！！");
+            $(".question").addClass('hide');
+            $("#success").removeClass('hide');
+            ok=true;
+        });
+        $("#ok").click(function(){
+            switch(i){
+                case 1:
+                    alert("再给你一次机会");
+                    break;
+                case 2:
+                     alert("真的考虑好了吗");
+                     break;
+                case 3:
+                    alert("给你机会再考虑一下");
+                    break;
+			        	case 4:
+                    alert("别嘛");
+                    break;
+                case 6:
+                    alert("我希望你再认真考虑一下");
+                    break;
+                default:
+                    alert("指令错误！！！");
+            }
+            i++;
+        });
+    });
+</script>
+
+</body></html>
